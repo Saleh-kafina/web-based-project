@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="stylesheet" href="CSS_Page_1.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Brands_store</title>
+    <style>
+        /* Remove the border and outline */
+        fieldset {
+            border: none;
+        }
+
+        .prands {
+            font-size: 30px;
+            color: rgb(185, 71, 71);
+            font: "display-family";
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #000000, #2b2b2b);
+            padding: 200px;
+            width: 1500px;
+            text-align: center;
+            box-shadow: 2px 8px 8px rgb(133, 129, 129);
+            position: absolute;
+            top: 2000px;
+            right: -10px;
+        }
+
+        .cart {
+            position: absolute;
+            top: 0px;
+            right: 125px;
+            width: 34px;
+            cursor: pointer;
+        }
+
+        .cart:hover {
+            border: #000000;
+            background-color: #f5f5f5;
+        }
+    </style>
+
+    
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+
+    <div class="black-bar">
+        <!-- المحتوى الذي يمكنك وضعه داخل الشريط الأسود -->
+    </div>
+    <style>
+
+    </style>
+
+
+    <div class="black-bar">
+        <div class="text-on-bar">
+            - WE JUST DO THE BEST -
+            <div class="sp">
+
+            </div>
+            <br>
+            <div style="display: flex;" style="background-color:blanchedalmond;">
+                <!-- First menu -->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<div class="dropdown">
+                    <button onclick="toggleDropdown(1)" class="dropbtn">
+                        <span class="icon">&#9776; </span> Menu
+                    </button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <a href="#home1" onclick="contact(1, 'home1')">Home </a>
+                        <a href="#file:///C:/Users/jouka/Desktop/My%20Project/index.html#" onclick="contact(1, 'about1')">About </a>
+                        <a href="#contact1" onclick="contact(1, 'contact1')">Contact </a>
+                        <a href="file:///C:/Users/jouka/Desktop/phase%202/fase2.html" onclick="contact(1, 'data1')">Data</a>
+                        <a href="#home1" onclick="contact(1, 'home1')">Home </a>
+                        <a href="#file:///C:/Users/jouka/Desktop/My%20Project/index.html#" onclick="contact(1, 'about1')">About </a>
+                        <a href="#contact1" onclick="contact(1, 'contact1')">Contact </a>
+                        <a href="file:///C:/Users/jouka/Desktop/phase%202/fase2.html" onclick="contact(1, 'data1')">Data</a>
+                    </div>
+                </div>
+
+                <!-- Second menu -->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(2)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Side Services
+                    </button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <a href="#shipping" onclick="contact(2, 'home2')">Shipping </a>
+                        <a href="return a product" onclick="contact(2, 'about2')">Return a product </a>
+                        <a href="#bulk order" onclick="contact(2, 'contact2')">Bulk order </a>
+                    </div>
+                </div>
+
+
+                <!-- Third menu -->
+                <div class="dropddown">
+                    <button onclick="toggleDropdown(3)" class="dropbtn">
+                        <span class="icon">&#9775;</span> Hot Sales
+                    </button>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <a href="#freeShipping" onclick="contact(3, 'freeshipping')"><b>Free shipping
+                                <i>(Limited)</i></b></a>
+                        <a href="#45%Sales" onclick="contact(3 ,'45%Sales')"><b>45% Sales <i> (Daily) </i></b></a>
+                        <a href="#saveupto25jod" onclick="contact(3 ,'saveUpTo25Jod')"><b>Save Up To 25JOD</b></a>
+                        <a href="#promocode" onclick="contact(3, 'promeCode')" style="color: rgb(46, 62, 21);"><b>Promo
+                                code</b></a>
+                    </div>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!--4th menu-->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(4)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Brands
+                    </button>
+                    <div id="myDropdown4" class="dropdown-content">
+                        <a href="#home4" onclick="contact(4, 'home4')"><b><i>Our Brand</i></b></a>
+                        <a href="#about4" onclick="contact(4, 'about4')"><b>Global Brands</b></a>
+                        <a href="#contact4" onclick="contact(4, 'contact4')"><b>Local Brands<i> -Soon-</i></b></a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="hr1">
+
+
+
+            <br>
+        </div>
+
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input class="search-input" type="search" name="q" placeholder="Search...">
+                <input class="search-button" type="submit" value="Search">
+            </form>
+            <a href="Cart.html"> <img class="cart" src="cartlogo.png"> </a>
+            <a href="Profile_Page.html"> <img class="img" src="profile-picture-icon-27 (1).png" height="28" width="28">
+            </a>
+
+        </div>
+    </div>
+
+
+    <style>
+
+    </style>
+
+    <script>
+
+        function toggleDropdown(menuNum) {
+            var dropdownId = "myDropdown" + menuNum;
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.id !== dropdownId && openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+
+            document.getElementById(dropdownId).classList.toggle("show");
+        }
+
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function contact(menuNum, option) {
+            if (option === 'home' + menuNum) {
+                // Add functionality for Home here
+                alert('You selected Home in Menu ' + menuNum);
+            } else if (option === 'about' + menuNum) {
+                window.location.href = 'file:///C:/Users/jouka/Desktop/My%20Project/index.html#';
+            } else if (option === 'contact' + menuNum) {
+                // Add functionality for Contact here
+                window.location.href = 'mailto:salleh.yousef03@gmail.com';
+            }
+        }
+    </script>
+
+    <img class="jackAndJohns" src="Jack-Jones.png" height="150">&nbsp;&nbsp;&nbsp;&nbsp;
+    <img class="pullAndBear" src="pull-bear.png" height="160">&nbsp;&nbsp;&nbsp;&nbsp;
+    <img class="gucci" src="Gucci-Logo-Transparent-PNG.png" height="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img class="polo" src="logo-polo-ralph-lauren-png-499.png" height="89">
+    <img class="converse" src="Converse-Logo-2011-2017.png" height=75>
+    =
+    <img class="jackAndJohns" src="Jack-Jones.png" height="150">
+
+    <img class="hm" src="h&m.png" height="50">
+
+    <style>
+        .hr1 {
+
+            margin-top: 25px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 79%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 2px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: black;
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+            box-shadow: 0px 2px 10px black;
+        }
+
+        .jackAndJohns {
+            position: absolute;
+            /* تجعل الصورة تتبع تنسيق الموقع المحدد */
+            top: 90px;
+            /* المسافة من الأعلى */
+            left: 1216px;
+            /* المسافة من اليسار */
+        }
+
+        .pullAndBear {
+            position: absolute;
+            top: 85px;
+            left: 150px;
+        }
+
+        .gucci {
+            position: absolute;
+            top: 105px;
+            left: 390px;
+        }
+
+        .polo {
+            position: absolute;
+            top: 116px;
+            left: 595px;
+        }
+
+        .converse {
+            position: absolute;
+            top: 128px;
+            left: 1000px;
+        }
+
+        .burberrys {
+            position: absolute;
+            top: 125px;
+            left: 965px;
+        }
+
+        .lacost {
+            position: absolute;
+            top: 107px;
+            left: 1135px;
+        }
+
+        .dior {
+            position: absolute;
+            top: 145px;
+            left: 1270px;
+        }
+
+        .hm {
+            position: absolute;
+            top: 135px;
+            left: 840px;
+        }
+
+        .gog {
+            top: 500px;
+        }
+
+
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+            position: absolute;
+            top: 85px;
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        .dropdown-content a {
+            color: rgb(0, 0, 0);
+            padding: 12px 16px;
+            text-decoration: dotted;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #807777;
+        }
+
+        .dropbtn {
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: -2px;
+            transition: transform 0.2s ease-in-out;
+            font-weight: bold;
+        }
+
+        .dropbtn:hover .icon {
+            transform: rotate(120deg);
+        }
+
+        .show {
+            display: block;
+        }
+
+        .dropdown {
+            margin-right: 30px;
+            /* للتباعد بين القوائم */
+        }
+
+        .pp {
+            color: rgb(0, 0, 0);
+            margin-top: -20px;
+            /* المسافة من الأعلى */
+            /* margin-bottom: 20px; /* المسافة من الأسفل */
+            /* margin-right: 10px; /* المسافة من اليمين */
+            margin-left: 10px;
+            /* المسافة من اليسار */
+            /* line-height: 1.6; /* ارتفاع السطر */
+            /* text-align: justify; /* محاذاة النص */
+            letter-spacing: 3px;
+            /* مسافات بين الحروف */
+            /* word-spacing: 2px; /* مسافات بين الكلمات */
+            /* text-indent: 20px; /* المسافة لبدء الفقرة الجديدة */
+            -webkit-text-stroke: 0px rgb(0, 0, 0);
+            /* حدود حول النص بسمك بكسل ولون أسود على متصفحات WebKit مثل Chrome و Safari */
+        }
+
+        .pp2 {
+            color: rgb(0, 0, 0);
+
+            /* المسافة من الأعلى */
+            /* margin-bottom: 20px; /* المسافة من الأسفل */
+            /* margin-right: 10px; /* المسافة من اليمين */
+            margin-left: 10px;
+            /* المسافة من اليسار */
+            /* line-height: 1.6; /* ارتفاع السطر */
+            /* text-align: justify; /* محاذاة النص */
+            letter-spacing: 3px;
+            /* مسافات بين الحروف */
+            /* word-spacing: 2px; /* مسافات بين الكلمات */
+            /* text-indent: 20px; /* المسافة لبدء الفقرة الجديدة */
+            -webkit-text-stroke: 0px rgb(0, 0, 0);
+            /* حدود حول النص بسمك بكسل ولون أسود على متصفحات WebKit مثل Chrome و Safari */
+        }
+
+        .fieldset {
+            margin-top: 10px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            /* margin-right: 10px; /* المسافة من اليمين */
+            margin-left: 10px;
+            /* المسافة من اليسار */
+            /* padding: 20px; /* المسافة الداخلية */
+            /* position: relative; /* لتحديد موقع محدد إذا لزم الأمر */
+            /* يمكنك استخدام top و right و left و bottom هنا لتحديد الموقع إذا لزم الأمر */
+            width: 1477px;
+            /* عرض الـ fieldset بالبكسل أو القيمة المطلوبة */
+            height: 150px;
+            /* ارتفاع الـ fieldset بالبكسل أو القيمة المطلوبة */
+
+        }
+
+
+
+        /* تحديد حجم وموقع حاوية البحث */
+    </style>
+
+
+
+    <style>
+        .a {
+            position: relative;
+            /* يسمح لنا بتحديد إحداثيات العناصر الداخلية بالنسبة لهذا العنصر */
+            top: 1px;
+            /* تحديد المسافة من الأعلى */
+            left: 590px;
+            /* تحديد المسافة من اليسار */
+            color: blue;
+            /* تغيير لون الروابط */
+            font-size: 16px;
+            /* تغيير حجم الخط للروابط */
+            font-family: 'Arial', sans-serif;
+            /* تغيير نوع الخط للروابط */
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .login-form {
+            width: calc(100% - 24px);
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            background-color: #f5f5f5;
+            transition: border-color 0.3s ease;
+        }
+
+        .go {
+            position: relative;
+            /* يسمح لنا بتحديد إحداثيات العناصر الداخلية بالنسبة لهذا العنصر */
+            top: -68px;
+            /* تحديد المسافة من الأعلى */
+            left: 110px;
+            /* تحديد المسافة من اليسار */
+            width: calc(42% - 24px);
+            padding: 10px;
+            border: none;
+            border-radius: 50px;
+            background-color: #ffffff;
+            color: #000000;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .form {
+            position: relative;
+            /* يسمح لنا بتحديد إحداثيات العناصر الداخلية بالنسبة لهذا العنصر */
+            top: -47px;
+            /* تحديد المسافة من الأعلى */
+            left: -20px;
+            /* تحديد المسافة من اليسار */
+        }
+
+        /* ستايلات النافذة المنبثقة */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+
+
+        }
+
+        .modal-content {
+            height: 10px;
+            /* ارتفاع العنصر */
+            background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(198, 136, 136));
+            /* تدرج من الأحمر إلى الأبيض */
+            background-repeat: no-repeat;
+            /* عدم تكرار الخلفية */
+            margin: 10% auto;
+            padding: 60px;
+            border: -1px solid #888;
+            width: 10%;
+            border-radius: 25px;
+            /* تدوير حواف النافذة */
+        }
+
+        .close {
+            color: #aaa;
+            position: relative;
+            /* يسمح لنا بتحديد إحداثيات العناصر الداخلية بالنسبة لهذا العنصر */
+            top: -50px;
+            /* تحديد المسافة من الأعلى */
+            left: -40px;
+            /* تحديد المسافة من اليسار */
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        // العثور على العناصر
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("openModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        // عند النقر على الرابط، افتح النافذة
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // عند النقر على (x)، أو المنطقة المحيطة بالنافذة، أغلق النافذة
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <center> <img class="startImg" src="q_fashion2.jpg" height="300"> </center>
+
+    <style>
+        .sech {
+            margin-top: 350px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 25%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 2px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: rgb(156, 44, 44);
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+        }
+
+        .startImg {
+            position: relative;
+            top: 250px;
+            
+            border: solid rgb(255, 255, 255) 3px;
+            border-radius: 15px;
+        }
+
+        .sec {
+            position: relative;
+            top: 82px;
+            left: 160px;
+            border: solid rgb(240, 183, 183) 3px;
+            border-radius: 50px;
+        }
+
+        .wel {
+            position: relative;
+            top: 200px;
+            right: 200px;
+        }
+
+
+
+        .fashion {
+            position: absolute;
+            top: 400px;
+            left: 450px;
+            box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+            /* هنا يتم تحديد الظل */
+        }
+
+        .h1 {
+            margin-top: 1875px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 99%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 20px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: rgb(194, 138, 138);
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+        }
+
+        .footer1 {
+            height: 50px;
+            background: linear-gradient(to bottom, white, rgb(255, 244, 227));
+        }
+
+        .outfit1 {
+            position: relative;
+            top: -250px;
+            left: 800px;
+            box-shadow: 8px 8px 8px rgb(108, 108, 108);
+
+        }
+
+        .o1 {
+            position: relative;
+            left: 155px;
+            top: 10px;
+            text-decoration: bold;
+            font-size: 30px;
+            color: #6b0000;
+            /*text-shadow: 16px 8px 8px rgb(123, 120, 120);*/
+
+        }
+
+        .o2 {
+            position: relative;
+            left: 160px;
+            top: 75px;
+            text-decoration: bold;
+            font-size: 30px;
+            color: rgb(29, 0, 84);
+            /* المسافة من الأعلى */
+            /* margin-bottom: 20px; /* المسافة من الأسفل */
+            /* margin-right: 10px; /* المسافة من اليمين */
+            /*margin-left: 10px;
+      /* المسافة من اليسار */
+            /* line-height: 1.6; /* ارتفاع السطر */
+            /* text-align: justify; /* محاذاة النص */
+            letter-spacing: 0px;
+            /* مسافات بين الحروف */
+            /* word-spacing: 2px; /* مسافات بين الكلمات */
+            text-indent: 20px;
+            /* المسافة لبدء الفقرة الجديدة */
+            -webkit-text-stroke: 0px rgb(0, 0, 0);
+            /* حدود حول النص بسمك بكسل ولون أسود على متصفحات WebKit مثل Chrome و Safari */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .o2::first-letter {
+            font-size: 75px;
+            color: #6b0000;
+            text-shadow: 6px 8px 19px black;
+        }
+
+        .s2 {
+            position: relative;
+            top: 315px;
+
+        }
+
+        .s3 {
+            position: relative;
+            top: 320px;
+        }
+
+        .s4 {
+            position: relative;
+            top: 325px;
+        }
+
+        .s5 {
+            position: relative;
+            top: 330px;
+        }
+
+        .s6 {
+            position: relative;
+            top: 335px;
+        }
+
+        .fieldsetAfterQuote {
+            position: absolute;
+            top: 700px;
+            left: 0px;
+            width: 1333px;
+            height: 350px;
+            padding-top: 20px;
+            /* زيادة المسافة العلوية هنا */
+            padding-bottom: 200px;
+            /* إذا كان لديك ارتفاع للجزء السفلي الثابت */
+            border: 1px solid #ffffff;
+            /* حدود للمثال فقط */
+            border-radius: 20px;
+        }
+    </style>
+
+    <fieldset class="fieldsetAfterQuote" style="background-color: #aaa;">
+        <h3 class="o1">Enjoy our new collection of winter outfits!</h3>
+        <p class="o2">Try now our soft cotton shirt topped <br> with a heavy -high-necked- broadcloth<br> coat. It will
+            make you feel what the<br> warmth of winter feels like... Be one<br> of the distinguished ones with what<br>
+            we offer!</p>
+        <img class="outfit1" src="outfit5.jpg" height="600">
+
+    </fieldset>
+    <h2 class="check"><b>Check out the news ?</b></h2>
+    <form action="Start_Shipping_Now_Page.html" method="post">
+        <a href="Start_Shipping_Now_Page.html"><input class="submit" type="submit" name="startshipping"
+                value="Start Shipping Now"></a>
+    </form>
+
+    <style>
+        .submit {
+            position: relative;
+            top: 1310px;
+            left: 653px;
+            background: rgb(81, 70, 70);
+            border-radius: 15px;
+            height: 50px;
+            width: 200px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        .check {
+            position: absolute;
+            top: 1580px;
+            left: 653px;
+        }
+
+        .submit:hover {
+            background: #c1abab;
+        }
+
+        .logInFace {
+            position: relative;
+            top: 1500px;
+            left: 151px;
+        }
+
+        .fieldset2 {
+            height: 200px;
+            background-color: #ffffff;
+            position: relative;
+            top: 900px;
+            left: -6px;
+            width: 630px;
+            border-radius: 20px;
+            box-shadow: 8px 8px 25px rgb(66, 65, 65);
+        }
+
+        .txtInField {
+            position: relative;
+            top: -2px;
+            left: 10px;
+            font-size: 21px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .txtInField::first-letter {
+            font-size: 40px;
+            color: rgb(152, 14, 90);
+        }
+
+        .zaraWall {
+            position: absolute;
+            top: 3300px;
+        }
+
+        .flast {
+            background-color: rgb(244, 233, 213);
+            opacity: 70%;
+            height: 400px;
+            width: 1300px;
+            position: absolute;
+            top: 3550px;
+            right: 90px;
+            border-radius: 20px;
+        }
+        .copy {
+            position: absolute;
+            top: 370px;
+            left: 290px;
+        }
+        .hr3 {
+            margin-top: 370px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 55%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 2px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: rgb(45, 0, 0);
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+        }
+        .sub {
+            width: calc(30% - 24px);
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #a67a00;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 250px;
+            left: 468px;
+        }
+        .sub:hover {
+      background-color: #372400;
+    }
+    .insta {
+            position: absolute;
+            top: 130px;
+            right: 730px;
+            width: 30px;
+            cursor: pointer;
+            opacity: 90%;
+        }
+
+        .face {
+            position: absolute;
+            top: 128px;
+            right: 677px;
+            width: 34px;
+            cursor: pointer;
+            opacity: 90%;
+        }
+
+        .twitter {
+            position: absolute;
+            top: 130px;
+            right: 630px;
+            width: 30px;
+            cursor: pointer;
+            opacity: 90%;
+        }
+
+        .youtube {
+            position: absolute;
+            top: 130px;
+            right: 580px;
+            width: 30px;
+            cursor: pointer;
+            opacity: 90%;
+        }
+        .follow {
+            position: absolute;
+            top: 80px;
+            right: 636px;
+            font-weight: bold;
+            opacity: 80%;
+        }
+    </style>
+    <img class="logInFace" src="loginFace4.jpg" width="1201px">
+
+    <fieldset class="fieldset2">
+        <p class="txtInField">Half of the enjoyment of beautiful and distant trips and evenings with friends or family
+            is choosing the favorite dress and elegance during the trip... Also, the beauty of occasions and holidays
+            lies in seeing the one you love and wearing the dress that you love.</p>
+    </fieldset>
+
+    <img class="zaraWall" src="zara.wall.jpg" height="760px">
+
+    <fieldset class="flast">
+        <h4 class="follow"> Follow Us </h4>
+        <img class="insta" src="insta.png">
+        <img class="face" src="face.png">
+        <img class="twitter" src="twitter.png">
+        <img class="youtube" src="youtube.png">
+
+        <hr class="hr3">
+        <p class="copy"><b>&copy; 2023</b> © 2023-2024 Faculty of Information Technology (FIT), Applied Science Private University, Amman, Jordan.</p>
+        <form action="feedback_page.html">
+            <a href="feedback_page.html"><input class="sub" type="submit" value="Rate your Experience!"></a>
+        </form>
+    </fieldset>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
