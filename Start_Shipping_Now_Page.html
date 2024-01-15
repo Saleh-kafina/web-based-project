@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="CSS_Page_1.css">
+
+    <title>Shop</title>
+</head>
+
+<body>
+
+    <div class="black-bar">
+        <!-- المحتوى الذي يمكنك وضعه داخل الشريط الأسود -->
+    </div>
+    <style>
+
+    </style>
+
+
+    <div class="black-bar">
+        <div class="text-on-bar">
+            - WE JUST DO THE BEST -
+            <div class="sp">
+
+            </div>
+            <br>
+            <div style="display: flex;" style="background-color:blanchedalmond;">
+                <!-- First menu -->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<div class="dropdown">
+                    <button onclick="toggleDropdown(1)" class="dropbtn">
+                        <span class="icon">&#9776; </span> Menu
+                    </button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <a href="#home1" onclick="contact(1, 'home1')">Home </a>
+                        <a href="#about1" onclick="contact(1, 'about1')">About </a>
+                        <a href="#contact1" onclick="contact(1, 'contact1')">Contact </a>
+                    </div>
+                </div>
+
+                <!-- Second menu -->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(2)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Side Services
+                    </button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <a href="#shipping" onclick="contact(2, 'home2')">Shipping </a>
+                        <a href="return a product" onclick="contact(2, 'about2')">Return a product </a>
+                        <a href="#bulk order" onclick="contact(2, 'contact2')">Bulk order </a>
+                    </div>
+                </div>
+
+
+                <!-- Third menu -->
+                <div class="dropddown">
+                    <button onclick="toggleDropdown(3)" class="dropbtn">
+                        <span class="icon">&#9775;</span> Hot Sales
+                    </button>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <a href="#freeShipping" onclick="contact(3, 'freeshipping')"><b>Free shipping
+                                <i>(Limited)</i></b></a>
+                        <a href="#45%Sales" onclick="contact(3 ,'45%Sales')"><b>45% Sales <i> (Daily) </i></b></a>
+                        <a href="#saveupto25jod" onclick="contact(3 ,'saveUpTo25Jod')"><b>Save Up To 25JOD</b></a>
+                        <a href="#promocode" onclick="contact(3, 'promeCode')" style="color: rgb(46, 62, 21);"><b>Promo
+                                code</b></a>
+                    </div>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!--4th menu-->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(4)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Brands
+                    </button>
+                    <div id="myDropdown4" class="dropdown-content">
+                        <a href="#home4" onclick="contact(4, 'home4')"><b><i>Our Brand</i></b></a>
+                        <a href="#about4" onclick="contact(4, 'about4')"><b>Global Brands</b></a>
+                        <a href="#contact4" onclick="contact(4, 'contact4')"><b>Local Brands<i> -Soon-</i></b></a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="hr1">
+
+
+
+            <br>
+        </div>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input class="search-input" type="search" name="q" placeholder="Search...">
+                <input class="search-button" type="submit" value="Search">
+            </form>
+            <a href="Cart.html"> <img class="cart" src="cartlogo.png"> </a>
+            <a href="Profile_Page.html"> <img class="img" src="profile-picture-icon-27 (1).png" height="28" width="28">
+            </a>
+        </div>
+    </div>
+
+    <script>
+
+        function toggleDropdown(menuNum) {
+            var dropdownId = "myDropdown" + menuNum;
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.id !== dropdownId && openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+
+            document.getElementById(dropdownId).classList.toggle("show");
+        }
+
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function contact(menuNum, option) {
+            if (option === 'home' + menuNum) {
+                window.location.href = 'file:///C:/Users/jouka/Desktop/My%20Project/Copy_3_of_HTML.html';
+            } else if (option === 'about' + menuNum) {
+                window.location.href = 'file:///C:/Users/jouka/Desktop/My%20Project/index.html#';
+            } else if (option === 'contact' + menuNum) {
+                // Add functionality for Contact here
+                window.location.href = 'mailto:salleh.yousef03@gmail.com';
+            }
+        }
+    </script>
+
+    <style>
+        .cart {
+  position: absolute;
+  top: 0px;
+  right: 125px;
+  width: 34px;
+  cursor: pointer;
+}
+
+.cart:hover {
+  border: #000000;
+  background-color: #f5f5f5;
+}
+
+        .hr1 {
+
+            margin-top: 25px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 79%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 2px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: black;
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+            box-shadow: 0px 2px 10px black;
+        }
+
+        .fieldShop1 {
+            position: relative;
+            top: 300px;
+            left: 148px;
+            width: 1179px;
+            height: 200px;
+            background-color: rgb(76, 74, 71);
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        .fieldShop2 {
+            position: relative;
+            top: 350px;
+            left: 148px;
+            width: 1179px;
+            height: 200px;
+            background-color: rgb(76, 74, 71);
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        .fieldShop3 {
+            position: relative;
+            top: 400px;
+            left: 148px;
+            width: 1179px;
+            height: 200px;
+            background-color: rgb(76, 74, 71);
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        .fieldShop4 {
+            position: relative;
+            top: 300px;
+            left: 148px;
+            width: 1179px;
+            height: 200px;
+            background-color: rgb(76, 74, 71);
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        .fieldShop5 {
+            position: relative;
+            top: 300px;
+            left: 148px;
+            width: 1179px;
+            height: 200px;
+            background-color: rgb(76, 74, 71);
+            border: none;
+            border-radius: 20px;
+
+
+        }
+
+        .img1 {
+            position: relative;
+            top: 2px;
+            left: 2px;
+            height: 200px;
+            width: 190px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 15px black;
+        }
+
+        .img2 {
+            position: relative;
+            top: 2px;
+            left: 13px;
+            height: 200px;
+            width: 190px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 15px black;
+        }
+
+        .fTxt {
+            position: absolute;
+            top: 30px;
+            left: 750px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-shadow: 0px 2px 10px black;
+            color: white;
+        }
+
+        .hrf {
+            position: absolute;
+            top: -1px;
+            left: 730px;
+            height: 200px;
+        }
+
+
+
+        input[type="range"]::-ms-thumb {
+            /* تخصيص المنزلق لمتصفحات Microsoft */
+            /* أمثلة للتصميمات: */
+            background: #3498db;
+            /* لون المنزلق */
+            border: 2px solid #3498db;
+            /* حدود المنزلق */
+            width: 20px;
+            /* عرض المنزلق */
+            height: 20px;
+            /* ارتفاع المنزلق */
+        }
+
+        .radio1 {
+            position: absolute;
+            top: 35px;
+            left: 440px;
+            rotate: 270deg;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .radio2 {
+            position: absolute;
+            top: 65px;
+            left: 440px;
+            rotate: 270deg;
+            border: none;
+            cursor: pointer;
+        }
+
+        .radio3 {
+            position: absolute;
+            top: 95px;
+            left: 440px;
+            rotate: 270deg;
+            border: none;
+            cursor: pointer;
+        }
+
+        .radio4 {
+            position: absolute;
+            top: 125px;
+            left: 440px;
+            rotate: 270deg;
+            border: none;
+            cursor: pointer;
+        }
+
+        .radio5 {
+            position: absolute;
+            top: 155px;
+            left: 440px;
+            rotate: 270deg;
+            border: none;
+            cursor: pointer;
+        }
+
+        .a1 {
+            position: absolute;
+            top: 36px;
+            left: 470px;
+            text-shadow: 2px 2px 6px black;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .a2 {
+            position: absolute;
+            top: 66px;
+            left: 470px;
+            text-shadow: 2px 2px 6px black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .a3 {
+            position: absolute;
+            top: 96px;
+            left: 470px;
+            text-shadow: 2px 2px 6px black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .a4 {
+            position: absolute;
+            top: 126px;
+            left: 470px;
+            text-shadow: 2px 2px 6px black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .a5 {
+            position: absolute;
+            top: 156px;
+            left: 470px;
+            text-shadow: 2px 2px 6px black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .number1 {
+            position: absolute;
+            top: 38px;
+            left: 620px;
+            width: 50px;
+        }
+
+        .Quantity1 {
+            position: absolute;
+            top: 16px;
+            left: 550px;
+        }
+
+        .card1 {
+            position: absolute;
+            top: 160px;
+            left: 610px;
+            border: 3px rgb(245, 157, 157);
+            border-radius: 20px;
+            height: 40px;
+            width: 100px;
+            background-color: rgb(110, 80, 53);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card1:hover {
+            translate: background-color 0.3s ease;
+            background-color: rgb(70, 51, 34);
+
+            width: 90;
+        }
+
+        /* ****** */
+        .img3 {
+            position: absolute;
+            top: 8px;
+            left: 50px;
+            height: 200px;
+            width: 170px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 15px black;
+        }
+
+        .img4 {
+            position: absolute;
+            top: 8px;
+            left: 238px;
+            height: 200px;
+            width: 170px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 15px black;
+        }
+
+        .img5 {
+            position: absolute;
+            top: 8px;
+            left: 178px;
+            height: 200px;
+            width: 230px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 15px black;
+        }
+    </style>
+
+    <fieldset class="fieldShop1">
+        <img class="img1" src="blackDress1.webp">
+        <img class="img2" src="whetDress1.webp">
+        <h3 class="fTxt">It consists mainly of an outer layer of soft <br>
+            natural cotton and an inner layer of warm<br>
+            fur, interspersed with velvet, so you can <br>
+            enjoy the warmth of winter with an elegant <br>appearance.</h3>
+
+        <form>
+            <h4 class="Quantity1">Quantity &nbsp; </h4>
+            <input class="radio1" type="radio" name="gg"> <b class="a1">xS</b>
+            <input class="radio2" type="radio" name="gg"> <b class="a2">S</b>
+            <input class="radio3" type="radio" name="gg"> <b class="a3">M</b>
+            <input class="radio4" type="radio" name="gg"> <b class="a4">L</b>
+            <input class="radio5" type="radio" name="gg"> <b class="a5">xL</b>
+            <input class="number1" type="number" min="1" max="25">
+            <input class="card1" type="submit" value="Add to card">
+        </form>
+        <hr class="hrf">
+    </fieldset>
+
+
+
+    <fieldset class="fieldShop2">
+        <h4 class="Quantity1">Quantity &nbsp; </h4>
+        <img class="img3" src="redJacket1.jpg">
+        <img class="img4" src="whiteJacket1.jpg">
+        <h3 class="fTxt">Try the trendly collection of long winter jackets... Experience the meaning of warmth and
+            distinction.</h3>
+        <form>
+            <input class="radio1" type="radio" name="gg"> <b class="a1">xS</b>
+            <input class="radio2" type="radio" name="gg"> <b class="a2">S</b>
+            <input class="radio3" type="radio" name="gg"> <b class="a3">M</b>
+            <input class="radio4" type="radio" name="gg"> <b class="a4">L</b>
+            <input class="radio5" type="radio" name="gg"> <b class="a5">xL</b>
+            <input class="number1" type="number" min="1" max="25">
+            <input class="card1" type="submit" value="Add to card">
+        </form>
+        <hr class="hrf">
+    </fieldset>
+
+    <fieldset class="fieldShop3">
+        <img class="img5" src="blueShoes.jpg">
+        <h3 class="fTxt">Comfortable mesh shoes... Suitable for elegant daily wear or if you are an athlete or for
+            walking and running, and let us not forget their comfort during long working hours in addition to their
+            beautiful appearance.</h3>
+        <form>
+            <h4 class="Quantity1">Quantity &nbsp; </h4>
+            <input class="radio1" type="radio" name="gg"> <b class="a1">37</b>
+            <input class="radio2" type="radio" name="gg"> <b class="a2">38</b>
+            <input class="radio3" type="radio" name="gg"> <b class="a3">39</b>
+            <input class="radio4" type="radio" name="gg"> <b class="a4">40</b>
+            <input class="radio5" type="radio" name="gg"> <b class="a5">41</b>
+            <input class="number1" type="number" min="1" max="25">
+            <input class="card1" type="submit" value="Add to card">
+        </form>
+        <hr class="hrf">
+    </fieldset>
+</body>
+
+</html>

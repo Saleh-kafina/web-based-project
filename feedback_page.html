@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <style>
+        .header-left {
+            padding: 4px 10px;
+        }
+
+        .header-right a {
+
+            text-decoration: none;
+            align-items: center;
+            padding-left: 15px;
+            color: black;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            height: 50px;
+            align-items: center;
+            background: linear-gradient(to bottom, rgb(180, 154, 111), white);
+            padding: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin-top: auto;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        footer {
+
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 15px;
+            background: linear-gradient(to bottom, rgb(180, 154, 111), white)
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        .home {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 35px;
+            cursor: pointer;
+        }
+
+        .home:hover {
+            background: rgb(255, 255, 255);
+        }
+
+        .feed {
+            position: absolute;
+            top: 190px;
+            left: 100px;
+            height: 80px;
+            width: 400px;
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        .fieldback {
+            position: absolute;
+            top: 100px;
+            left: 470px;
+            height: 500px;
+            width: 600px;
+            border: none;
+            background-color: rgb(234, 228, 221);
+            border-radius: 50px;
+
+        }
+
+        .feedtext {
+            position: absolute;
+            top: 50px;
+            left: 75px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 70%;
+        }
+
+        .range {
+            position: absolute;
+            top: 370px;
+            left: 155px;
+            width: 300px;
+            background: aquamarine;
+        }
+
+        .imoji1 {
+            position: absolute;
+            top: 330px;
+            left: 150px;
+        }
+
+        .imoji2 {
+            position: absolute;
+            top: 330px;
+            left: 218px;
+        }
+
+        .imoji3 {
+            position: absolute;
+            top: 330px;
+            left: 289px;
+        }
+
+        .imoji4 {
+            position: absolute;
+            top: 330px;
+            left: 356px;
+        }
+
+        .imoji5 {
+            position: absolute;
+            top: 330px;
+            left: 425px;
+        }
+
+        .hh4 {
+            position: absolute;
+            top: 310px;
+            left: 217px;
+            text-decoration: underline;
+            font-weight: bold;
+            color: brown;
+        }
+
+        .sub {
+            width: calc(50% - 24px);
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #602828;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.1s ease;
+            position: absolute;
+            top: 420px;
+            left: 165px;
+        }
+
+        .sub:hover {
+            background-color: #4c0000;
+        }
+    </style>
+
+    <header>
+        <div class="header-left">
+            <h2>
+                Grand Brand
+            </h2>
+        </div>
+        <div class="header-right">
+
+
+        </div>
+
+        <a href="Copy_3_of_HTML.html"><img class="home" src="home2.png"></a>
+
+    </header>
+
+    <fieldset class="fieldback">
+        <form>
+            <center>
+                <h3 class="feedtext"> We ask you, dear customer , <br> to give us your honest opinion about our
+                    site...<br> Use the box below to describe your humble opinion. </h3>
+            </center>
+            <input class="feed" type="tel" placeholder="&nbsp;&nbsp;&nbsp;your discribtion...">
+            <input class="range" type="range">
+            <h4 class="hh4">how was your experience?</h4>
+            <h2 class="imoji1">😤</h2>
+            <h2 class="imoji2">😕</h2>
+            <h2 class="imoji3">🙄</h2>
+            <h2 class="imoji4">😀</h2>
+            <h2 class="imoji5">🤗</h2>
+            <div onclick="showAlert()">
+            <input class="sub" type="submit" value="Send!">
+        </div>
+        </form>
+    </fieldset>
+
+    <footer>
+        <p><strong>&copy; 2023</strong> © 2023-2024 Faculty of Information Technology (FIT), Applied Science Private University, Amman, Jordan.</p>
+    </footer>
+    <script>
+        function showAlert() {
+        alert('Your message has sent, Thanks for supporting!')
+        }
+    </script>
+    
+
+</html>
