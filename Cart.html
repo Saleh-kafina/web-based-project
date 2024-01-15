@@ -1,0 +1,206 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="CSS_Page_1.css">
+    <title></title>
+</head>
+
+<body>
+
+    <style>
+        .hr1 {
+
+            margin-top: 25px;
+            /* المسافة من الأعلى */
+            margin-bottom: 20px;
+            /* المسافة من الأسفل */
+            border: none;
+            /* إزالة الحدود الافتراضية إذا لزم الأمر */
+            width: 79%;
+            /* يحدد عرض الخط الأفقي بنسبة مئوية من عرض العنصر الذي يحتويه */
+            height: 2px;
+            /* يحدد سمك الخط الأفقي بالبكسل أو القيمة المحددة */
+            background-color: black;
+            /* يحدد لون الخط الأفقي */
+            border: none;
+            /* يزيل أية حدود إضافية إذا كان هناك */
+            box-shadow: 0px 2px 10px black;
+        }
+
+        .black-bar2 {
+            background: linear-gradient(to bottom, rgb(85, 114, 177), white);
+            height: 112px;
+            width: 100%;
+            position: fixed;
+            top: -10px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .text-on-bar2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(114, 12, 12);
+            /* لون النص */
+            text-align: center;
+            /* محاذاة النص في وسط الشريط */
+            padding-top: 15px;
+            /* تباعد من الأعلى */
+            font-size: 18px;
+            /* حجم النص */
+            font-weight: bold;
+            /* سمك الخط */
+        }
+        .emptyCart {
+            position: absolute;
+            top: 150px;
+            left: 360px;
+        }
+        footer {
+
+        color: black;
+        text-align: center;
+        padding: 1px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 15px;
+        background: linear-gradient(to bottom, rgb(85, 114, 177), white);
+        }
+    </style>
+
+    <div class="black-bar2">
+        <div class="text-on-bar">
+            - WE JUST DO THE BEST - 
+            <h5 class="text-on-bar2">Shopping cart</h5>
+            <div class="sp">
+
+            </div>
+            <br>
+            <div style="display: flex;" style="background-color:blanchedalmond;">
+                <!-- First menu -->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<div class="dropdown">
+                    <button onclick="toggleDropdown(1)" class="dropbtn">
+                        <span class="icon">&#9776; </span> Menu
+                    </button>
+                    <div id="myDropdown1" class="dropdown-content">
+                        <a href="#home1" onclick="contact(1, 'home1')">Home </a>
+                        <a href="#about1" onclick="contact(1, 'about1')">About </a>
+                        <a href="#contact1" onclick="contact(1, 'contact1')">Contact </a>
+                    </div>
+                </div>
+
+                <!-- Second menu -->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(2)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Side Services
+                    </button>
+                    <div id="myDropdown2" class="dropdown-content">
+                        <a href="#shipping" onclick="contact(2, 'home2')">Shipping </a>
+                        <a href="return a product" onclick="contact(2, 'about2')">Return a product </a>
+                        <a href="#bulk order" onclick="contact(2, 'contact2')">Bulk order </a>
+                    </div>
+                </div>
+
+
+                <!-- Third menu -->
+                <div class="dropddown">
+                    <button onclick="toggleDropdown(3)" class="dropbtn">
+                        <span class="icon">&#9775;</span> Hot Sales
+                    </button>
+                    <div id="myDropdown3" class="dropdown-content">
+                        <a href="#freeShipping" onclick="contact(3, 'freeshipping')"><b>Free shipping
+                                <i>(Limited)</i></b></a>
+                        <a href="#45%Sales" onclick="contact(3 ,'45%Sales')"><b>45% Sales <i> (Daily) </i></b></a>
+                        <a href="#saveupto25jod" onclick="contact(3 ,'saveUpTo25Jod')"><b>Save Up To 25JOD</b></a>
+                        <a href="#promocode" onclick="contact(3, 'promeCode')" style="color: rgb(46, 62, 21);"><b>Promo
+                                code</b></a>
+                    </div>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!--4th menu-->
+                <div class="dropdown">
+                    <button onclick="toggleDropdown(4)" class="dropbtn">
+                        <span class="icon">&#9776;</span> Brands
+                    </button>
+                    <div id="myDropdown4" class="dropdown-content">
+                        <a href="#home4" onclick="contact(4, 'home4')"><b><i>Our Brand</i></b></a>
+                        <a href="#about4" onclick="contact(4, 'about4')"><b>Global Brands</b></a>
+                        <a href="#contact4" onclick="contact(4, 'contact4')"><b>Local Brands<i> -Soon-</i></b></a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="hr1">
+
+
+
+            <br>
+        </div>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input class="search-input" type="search" name="q" placeholder="Search...">
+                <input class="search-button" type="submit" value="Search">
+            </form>
+            <a href="Profile_Page.html"> <img class="img" src="profile-picture-icon-27 (1).png" height="28" width="28">
+            </a>
+        </div>
+    </div>
+
+
+    <style>
+
+    </style>
+
+    <script>
+
+        function toggleDropdown(menuNum) {
+            var dropdownId = "myDropdown" + menuNum;
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.id !== dropdownId && openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+
+            document.getElementById(dropdownId).classList.toggle("show");
+        }
+
+
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        function contact(menuNum, option) {
+            if (option === 'home' + menuNum) {
+               window.location.href = 'file:///C:/Users/jouka/Desktop/My%20Project/Copy_3_of_HTML.html';
+            } else if (option === 'about' + menuNum) {
+                window.location.href = 'file:///C:/Users/jouka/Desktop/My%20Project/index.html#';
+            } else if (option === 'contact' + menuNum) {
+                // Add functionality for Contact here
+                window.location.href = 'mailto:salleh.yousef03@gmail.com';
+            }
+        }
+    </script>
+
+ <img class="emptyCart" src="cart_empty.png"> 
+
+ <footer>
+    <p><strong>&copy; 2023</strong> © 2023-2024 Faculty of Information Technology (FIT), Applied Science Private University, Amman, Jordan.</p>
+</footer>
+</body>
+
+</html>
